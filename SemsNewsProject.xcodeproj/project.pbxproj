@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005E0394616B4ACE94F19B09 /* Pods_SemsNewsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97DCBAAE76151121237E74C /* Pods_SemsNewsProject.framework */; };
+		930A00CC29C251FB0097C5CC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A00CB29C251FB0097C5CC /* LoginViewModel.swift */; };
 		DAA221AE29C0F6F600C7F80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221AD29C0F6F600C7F80C /* AppDelegate.swift */; };
 		DAA221B029C0F6F600C7F80C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221AF29C0F6F600C7F80C /* SceneDelegate.swift */; };
-		DAA221B229C0F6F600C7F80C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221B129C0F6F600C7F80C /* ViewController.swift */; };
-		DAA221B529C0F6F600C7F80C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA221B329C0F6F600C7F80C /* Main.storyboard */; };
+		DAA221B229C0F6F600C7F80C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221B129C0F6F600C7F80C /* LoginViewController.swift */; };
+		DAA221B529C0F6F600C7F80C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA221B329C0F6F600C7F80C /* Login.storyboard */; };
 		DAA221B729C0F6FA00C7F80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA221B629C0F6FA00C7F80C /* Assets.xcassets */; };
 		DAA221BA29C0F6FA00C7F80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA221B829C0F6FA00C7F80C /* LaunchScreen.storyboard */; };
+		DAA221C229C0F90900C7F80C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA221C129C0F90800C7F80C /* GoogleService-Info.plist */; };
+		DAA221C429C114C600C7F80C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221C329C114C600C7F80C /* Model.swift */; };
+		DAA221CC29C1C09A00C7F80C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221CB29C1C09A00C7F80C /* APIManager.swift */; };
+		DAA221CE29C1C2DA00C7F80C /* TitleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221CD29C1C2DA00C7F80C /* TitleService.swift */; };
+		DAA221D029C1C9B700C7F80C /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221CF29C1C9B700C7F80C /* TitleViewModel.swift */; };
+		DAA221D229C1D8FF00C7F80C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D129C1D8FF00C7F80C /* TestViewController.swift */; };
+		DAA221D829C204EC00C7F80C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D729C204EC00C7F80C /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BFA466739201D90065EE5F4 /* Pods-SemsNewsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemsNewsProject.debug.xcconfig"; path = "Target Support Files/Pods-SemsNewsProject/Pods-SemsNewsProject.debug.xcconfig"; sourceTree = "<group>"; };
+		4458812D5E0F184844F62F4A /* Pods-SemsNewsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemsNewsProject.release.xcconfig"; path = "Target Support Files/Pods-SemsNewsProject/Pods-SemsNewsProject.release.xcconfig"; sourceTree = "<group>"; };
+		930A00CB29C251FB0097C5CC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B97DCBAAE76151121237E74C /* Pods_SemsNewsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SemsNewsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA221AA29C0F6F600C7F80C /* SemsNewsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemsNewsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA221AD29C0F6F600C7F80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA221AF29C0F6F600C7F80C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAA221B129C0F6F600C7F80C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DAA221B429C0F6F600C7F80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAA221B129C0F6F600C7F80C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DAA221B429C0F6F600C7F80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		DAA221B629C0F6FA00C7F80C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA221B929C0F6FA00C7F80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA221BB29C0F6FA00C7F80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA221C129C0F90800C7F80C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DAA221C329C114C600C7F80C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DAA221CB29C1C09A00C7F80C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DAA221CD29C1C2DA00C7F80C /* TitleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleService.swift; sourceTree = "<group>"; };
+		DAA221CF29C1C9B700C7F80C /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
+		DAA221D129C1D8FF00C7F80C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		DAA221D729C204EC00C7F80C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005E0394616B4ACE94F19B09 /* Pods_SemsNewsProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		472925FD0F10565D7EB7BB11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BFA466739201D90065EE5F4 /* Pods-SemsNewsProject.debug.xcconfig */,
+				4458812D5E0F184844F62F4A /* Pods-SemsNewsProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C8D47CDDB749EEB2E0647B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B97DCBAAE76151121237E74C /* Pods_SemsNewsProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		930A00CA29C24DFA0097C5CC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221AF29C0F6F600C7F80C /* SceneDelegate.swift */,
+				DAA221AD29C0F6F600C7F80C /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		DAA221A129C0F6F600C7F80C = {
 			isa = PBXGroup;
 			children = (
 				DAA221AC29C0F6F600C7F80C /* SemsNewsProject */,
 				DAA221AB29C0F6F600C7F80C /* Products */,
+				472925FD0F10565D7EB7BB11 /* Pods */,
+				7C8D47CDDB749EEB2E0647B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +105,70 @@
 		DAA221AC29C0F6F600C7F80C /* SemsNewsProject */ = {
 			isa = PBXGroup;
 			children = (
-				DAA221AD29C0F6F600C7F80C /* AppDelegate.swift */,
-				DAA221AF29C0F6F600C7F80C /* SceneDelegate.swift */,
-				DAA221B129C0F6F600C7F80C /* ViewController.swift */,
-				DAA221B329C0F6F600C7F80C /* Main.storyboard */,
+				930A00CA29C24DFA0097C5CC /* AppDelegate */,
+				DAD121A229C2466A00C94701 /* Screens */,
+				DAA221CA29C1C05E00C7F80C /* Web Service */,
+				DAA221C729C1C02200C7F80C /* View Model */,
+				DAA221C629C1C00400C7F80C /* Model */,
+				DAA221C529C1BFED00C7F80C /* View */,
 				DAA221B629C0F6FA00C7F80C /* Assets.xcassets */,
 				DAA221B829C0F6FA00C7F80C /* LaunchScreen.storyboard */,
 				DAA221BB29C0F6FA00C7F80C /* Info.plist */,
+				DAA221C129C0F90800C7F80C /* GoogleService-Info.plist */,
 			);
 			path = SemsNewsProject;
+			sourceTree = "<group>";
+		};
+		DAA221C529C1BFED00C7F80C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221D129C1D8FF00C7F80C /* TestViewController.swift */,
+				DAA221D729C204EC00C7F80C /* CustomCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAA221C629C1C00400C7F80C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221C329C114C600C7F80C /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAA221C729C1C02200C7F80C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221CF29C1C9B700C7F80C /* TitleViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		DAA221CA29C1C05E00C7F80C /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221CB29C1C09A00C7F80C /* APIManager.swift */,
+				DAA221CD29C1C2DA00C7F80C /* TitleService.swift */,
+			);
+			path = "Web Service";
+			sourceTree = "<group>";
+		};
+		DAD121A229C2466A00C94701 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DAD121A329C2467F00C94701 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DAD121A329C2467F00C94701 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221B329C0F6F600C7F80C /* Login.storyboard */,
+				DAA221B129C0F6F600C7F80C /* LoginViewController.swift */,
+				930A00CB29C251FB0097C5CC /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAA221BE29C0F6FA00C7F80C /* Build configuration list for PBXNativeTarget "SemsNewsProject" */;
 			buildPhases = (
+				521A210E97CD67375AF8E85D /* [CP] Check Pods Manifest.lock */,
 				DAA221A629C0F6F600C7F80C /* Sources */,
 				DAA221A729C0F6F600C7F80C /* Frameworks */,
 				DAA221A829C0F6F600C7F80C /* Resources */,
+				0CD52DC08FE56AC76AD58281 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,33 +232,83 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA221BA29C0F6FA00C7F80C /* LaunchScreen.storyboard in Resources */,
+				DAA221C229C0F90900C7F80C /* GoogleService-Info.plist in Resources */,
 				DAA221B729C0F6FA00C7F80C /* Assets.xcassets in Resources */,
-				DAA221B529C0F6F600C7F80C /* Main.storyboard in Resources */,
+				DAA221B529C0F6F600C7F80C /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CD52DC08FE56AC76AD58281 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SemsNewsProject/Pods-SemsNewsProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SemsNewsProject/Pods-SemsNewsProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SemsNewsProject/Pods-SemsNewsProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		521A210E97CD67375AF8E85D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SemsNewsProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAA221A629C0F6F600C7F80C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA221B229C0F6F600C7F80C /* ViewController.swift in Sources */,
+				DAA221CC29C1C09A00C7F80C /* APIManager.swift in Sources */,
+				DAA221B229C0F6F600C7F80C /* LoginViewController.swift in Sources */,
+				DAA221D829C204EC00C7F80C /* CustomCell.swift in Sources */,
+				DAA221D229C1D8FF00C7F80C /* TestViewController.swift in Sources */,
+				DAA221CE29C1C2DA00C7F80C /* TitleService.swift in Sources */,
 				DAA221AE29C0F6F600C7F80C /* AppDelegate.swift in Sources */,
+				DAA221D029C1C9B700C7F80C /* TitleViewModel.swift in Sources */,
 				DAA221B029C0F6F600C7F80C /* SceneDelegate.swift in Sources */,
+				930A00CC29C251FB0097C5CC /* LoginViewModel.swift in Sources */,
+				DAA221C429C114C600C7F80C /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DAA221B329C0F6F600C7F80C /* Main.storyboard */ = {
+		DAA221B329C0F6F600C7F80C /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DAA221B429C0F6F600C7F80C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		DAA221B829C0F6FA00C7F80C /* LaunchScreen.storyboard */ = {
@@ -282,17 +438,18 @@
 		};
 		DAA221BF29C0F6FA00C7F80C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BFA466739201D90065EE5F4 /* Pods-SemsNewsProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M4UA5422US;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SemsNewsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,6 +459,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhatdemir.SemsNewsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,17 +468,18 @@
 		};
 		DAA221C029C0F6FA00C7F80C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4458812D5E0F184844F62F4A /* Pods-SemsNewsProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M4UA5422US;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SemsNewsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,6 +489,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhatdemir.SemsNewsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
