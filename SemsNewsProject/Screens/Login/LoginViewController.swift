@@ -65,8 +65,7 @@ private extension LoginViewController {
 extension LoginViewController: LoginViewModelDelegate {
     
     func didSignInSuccess() {
-        // Bir sonraki sayfaya geçiş yapılmalı.
-        print("didSignInSuccess")
+        navigationController?.pushViewController(HomeViewController(nibName: "HomeViewController", bundle: nil), animated: true)
     }
     
     func didSignInFail(message: String) {

@@ -2,7 +2,7 @@
 //  LoginViewModel.swift
 //  SemsNewsProject
 //
-//  Created by Emre Büyüker on 15.03.2023.
+//  Created by Serhat Demir on 15.03.2023.
 //
 
 import Foundation

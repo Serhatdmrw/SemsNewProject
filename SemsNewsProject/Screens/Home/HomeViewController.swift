@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Lottie
 
 class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private var responseModel: Welcome?
     private let viewModel = HomeViewModel()
+    var animationView = LottieAnimationView(name: "anime")
     
     // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!
@@ -20,6 +22,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setAnimationView()
         addDelegates()
         fechService()
         self.tableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -36,7 +39,19 @@ private extension HomeViewController {
     }
     
     func fechService() {
+        animationView.play()
+        animationView.isHidden = false
         viewModel.fechService()
+        
+    }
+    
+    func setAnimationView() {
+        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        animationView.center = view.center
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.isHidden = true
+        view.addSubview(animationView)
     }
     
     func makeAlert(tittleInput: String, messegaInput: String) {
@@ -74,10 +89,14 @@ extension HomeViewController: HomeViewModelDelegate {
         self.responseModel = responseModel
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.animationView.stop()
+            self.animationView.isHidden = true
         }
     }
     
     func didFetchServiceFail(message: String) {
         makeAlert(tittleInput: "Error", messegaInput: message)
+        self.animationView.stop()
+        self.animationView.isHidden = true
     }
 }
