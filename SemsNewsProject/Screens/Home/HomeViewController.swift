@@ -80,6 +80,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.dateLabel.text = dateFormatter.string(from: date)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let articlesUrl = self.responseModel?.articles[indexPath.row].url else {
+            makeAlert(tittleInput: "Error", messegaInput: "Bir hata oluştu.")
+            return
+        }
+        if let url = URL(string: articlesUrl) {
+            UIApplication.shared.open(url)
+        }
+
+    }
 }
 
 // MARK: - HomeViewModelDelegate
