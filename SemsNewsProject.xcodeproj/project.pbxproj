@@ -25,7 +25,7 @@
 		DAA221B729C0F6FA00C7F80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA221B629C0F6FA00C7F80C /* Assets.xcassets */; };
 		DAA221BA29C0F6FA00C7F80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA221B829C0F6FA00C7F80C /* LaunchScreen.storyboard */; };
 		DAA221C229C0F90900C7F80C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA221C129C0F90800C7F80C /* GoogleService-Info.plist */; };
-		DAA221C429C114C600C7F80C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221C329C114C600C7F80C /* Model.swift */; };
+		DAA221C429C114C600C7F80C /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221C329C114C600C7F80C /* ResponseModel.swift */; };
 		DAAEA2DE29C5C3F300FC2265 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2DC29C5C3F300FC2265 /* TabbarViewController.swift */; };
 		DAAEA2DF29C5C3F300FC2265 /* TabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAEA2DD29C5C3F300FC2265 /* TabbarViewController.xib */; };
 		DAAEA2E729C5E53100FC2265 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */; };
@@ -56,7 +56,7 @@
 		DAA221B929C0F6FA00C7F80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA221BB29C0F6FA00C7F80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA221C129C0F90800C7F80C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DAA221C329C114C600C7F80C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DAA221C329C114C600C7F80C /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		DAAEA2DC29C5C3F300FC2265 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		DAAEA2DD29C5C3F300FC2265 /* TabbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarViewController.xib; sourceTree = "<group>"; };
 		DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +105,7 @@
 		930A00CD29C25E670097C5CC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DAA221C629C1C00400C7F80C /* Models */,
 				930A00CE29C25E730097C5CC /* Managers */,
 			);
 			path = Shared;
@@ -157,19 +158,18 @@
 				DAA221BB29C0F6FA00C7F80C /* Info.plist */,
 				DAA221B829C0F6FA00C7F80C /* LaunchScreen.storyboard */,
 				930A00CA29C24DFA0097C5CC /* AppDelegate */,
-				DAA221C629C1C00400C7F80C /* Model */,
 				DAD121A229C2466A00C94701 /* Screens */,
 				930A00CD29C25E670097C5CC /* Shared */,
 			);
 			path = SemsNewsProject;
 			sourceTree = "<group>";
 		};
-		DAA221C629C1C00400C7F80C /* Model */ = {
+		DAA221C629C1C00400C7F80C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DAA221C329C114C600C7F80C /* Model.swift */,
+				DAA221C329C114C600C7F80C /* ResponseModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DAAEA2DB29C5C3DD00FC2265 /* Tabbar */ = {
@@ -345,7 +345,7 @@
 				930A00CC29C251FB0097C5CC /* LoginViewModel.swift in Sources */,
 				DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */,
 				DA53D87D29C6273A00A767DD /* SearchTableViewCell.swift in Sources */,
-				DAA221C429C114C600C7F80C /* Model.swift in Sources */,
+				DAA221C429C114C600C7F80C /* ResponseModel.swift in Sources */,
 				930A00E029C26B690097C5CC /* HomeViewController.swift in Sources */,
 				DAAEA2DE29C5C3F300FC2265 /* TabbarViewController.swift in Sources */,
 				DA263A1829C3247900AC8AF2 /* HomeViewCell.swift in Sources */,

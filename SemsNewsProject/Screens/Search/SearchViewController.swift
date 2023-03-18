@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var responseModel: Welcome?
+    private var responseModel: ResponseModel?
     private let searcViewModel = SearcViewModel()
 
     // MARK: - Life Cycle
@@ -77,7 +77,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - SearchViewModelDelegate
 extension SearchViewController: SearcViewModelDelegate {
-    func didFetchServiceSuccess(responseModel: Welcome) {
+    func didFetchServiceSuccess(responseModel: ResponseModel) {
         self.responseModel = responseModel
         DispatchQueue.main.async {
             self.tableView.reloadData()

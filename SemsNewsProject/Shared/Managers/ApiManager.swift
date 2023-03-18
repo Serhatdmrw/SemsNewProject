@@ -16,7 +16,7 @@ class ApiManager {
     private let searchEndPoint = "/everything?Language=tr&q="
     private let sortBy = "&sortBy=popularity"
     
-    func fetchService(searchText: String?, completion: @escaping(Result<Welcome, Error>) -> Void) {
+    func fetchService(searchText: String?, completion: @escaping(Result<ResponseModel, Error>) -> Void) {
         
         var urlString = ""
         
@@ -38,7 +38,7 @@ class ApiManager {
             guard let data = data else { return }
             
             do {
-                let welcome = try JSONDecoder().decode(Welcome.self, from: data)
+                let welcome = try JSONDecoder().decode(ResponseModel.self, from: data)
                 completion(.success(welcome))
             } catch {
                 completion(.failure(error))

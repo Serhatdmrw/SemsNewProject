@@ -11,7 +11,7 @@ import Lottie
 class HomeViewController: UIViewController {
     
     // MARK: - Properties
-    private var responseModel: Welcome?
+    private var responseModel: ResponseModel?
     private let viewModel = HomeViewModel()
     var animationView = LottieAnimationView(name: "anime")
     
@@ -96,7 +96,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - HomeViewModelDelegate
 extension HomeViewController: HomeViewModelDelegate {
     
-    func didFetchServiceSuccess(responseModel: Welcome) {
+    func didFetchServiceSuccess(responseModel: ResponseModel) {
         self.responseModel = responseModel
         DispatchQueue.main.async {
             self.tableView.reloadData()

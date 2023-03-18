@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeViewModelDelegate: AnyObject {
-    func didFetchServiceSuccess(responseModel: Welcome)
+    func didFetchServiceSuccess(responseModel: ResponseModel)
     func didFetchServiceFail(message: String)
 }
 
