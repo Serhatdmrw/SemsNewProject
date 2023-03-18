@@ -25,7 +25,9 @@ private extension TabbarViewController {
         
         let homeViewController = HomeViewController()
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "homeIcon"), tag: 0)
-        viewControllers = [homeViewController]
+        let searchViewController = SearchViewController()
+        searchViewController.tabBarItem = UITabBarItem(title: "Search", image: nil, tag: 1)
+        viewControllers = [homeViewController, searchViewController]
     }
     
     func setTabbarItem() {

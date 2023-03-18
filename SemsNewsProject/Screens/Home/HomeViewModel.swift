@@ -18,7 +18,7 @@ class HomeViewModel {
     weak var delegate: HomeViewModelDelegate?
     
     func fechService() {
-        ApiManager().fetchService { result in
+        ApiManager().fetchService(searchText: nil) { result in
             switch result {
             case .success(let response):
                 self.delegate?.didFetchServiceSuccess(responseModel: response)

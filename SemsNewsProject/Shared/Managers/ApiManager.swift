@@ -11,11 +11,22 @@ class ApiManager {
     
     // MARK: - Constants
     private let baseUrl = "https://newsapi.org/v2"
-    private let apiKey = "0f8ebdf3fb89415399a34e7047179648"
+    private let apiKey = "&apiKey=0f8ebdf3fb89415399a34e7047179648"
+    private let topHeadlinesEndPoint = "/top-headlines?Language=tr"
+    private let searchEndPoint = "/everything?Language=tr&q="
+    private let sortBy = "&sortBy=popularity"
     
-    func fetchService(completion: @escaping(Result<Welcome, Error>) -> Void) {
+    func fetchService(searchText: String?, completion: @escaping(Result<Welcome, Error>) -> Void) {
         
-        guard let url = URL(string: "\(baseUrl)/top-headlines?Language=tr&apiKey=\(apiKey)") else { return }
+        var urlString = ""
+        
+        if let searchText = searchText {
+            urlString = "\(baseUrl)\(searchEndPoint)\(searchText)\(sortBy)\(apiKey)"
+        } else {
+            urlString = "\(baseUrl)\(topHeadlinesEndPoint)\(apiKey)"
+        }
+        
+        guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             
