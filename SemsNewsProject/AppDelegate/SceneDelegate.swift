@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let currentUser = Auth.auth().currentUser
         if currentUser != nil {
-            let navigationController = UINavigationController(rootViewController: HomeViewController())
+            let navigationController = UINavigationController(rootViewController: TabbarViewController())
             self.window?.rootViewController = navigationController
             self.window?.makeKeyAndVisible()
         }

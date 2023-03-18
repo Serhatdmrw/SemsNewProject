@@ -24,6 +24,8 @@
 		DAA221BA29C0F6FA00C7F80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA221B829C0F6FA00C7F80C /* LaunchScreen.storyboard */; };
 		DAA221C229C0F90900C7F80C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA221C129C0F90800C7F80C /* GoogleService-Info.plist */; };
 		DAA221C429C114C600C7F80C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221C329C114C600C7F80C /* Model.swift */; };
+		DAAEA2DE29C5C3F300FC2265 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2DC29C5C3F300FC2265 /* TabbarViewController.swift */; };
+		DAAEA2DF29C5C3F300FC2265 /* TabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAEA2DD29C5C3F300FC2265 /* TabbarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		DAA221BB29C0F6FA00C7F80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA221C129C0F90800C7F80C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAA221C329C114C600C7F80C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DAAEA2DC29C5C3F300FC2265 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		DAAEA2DD29C5C3F300FC2265 /* TabbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +162,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DAAEA2DB29C5C3DD00FC2265 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEA2DC29C5C3F300FC2265 /* TabbarViewController.swift */,
+				DAAEA2DD29C5C3F300FC2265 /* TabbarViewController.xib */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		DAD121A229C2466A00C94701 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DAAEA2DB29C5C3DD00FC2265 /* Tabbar */,
 				930A00D129C262CE0097C5CC /* Home */,
 				DAD121A329C2467F00C94701 /* Login */,
 			);
@@ -241,6 +255,7 @@
 				DAA221C229C0F90900C7F80C /* GoogleService-Info.plist in Resources */,
 				DAA221B729C0F6FA00C7F80C /* Assets.xcassets in Resources */,
 				DA263A1929C3247900AC8AF2 /* HomeViewCell.xib in Resources */,
+				DAAEA2DF29C5C3F300FC2265 /* TabbarViewController.xib in Resources */,
 				DA263A1D29C34EE100AC8AF2 /* anime.json in Resources */,
 				930A00E129C26B690097C5CC /* HomeViewController.xib in Resources */,
 				DAA221B529C0F6F600C7F80C /* Login.storyboard in Resources */,
@@ -304,6 +319,7 @@
 				930A00CC29C251FB0097C5CC /* LoginViewModel.swift in Sources */,
 				DAA221C429C114C600C7F80C /* Model.swift in Sources */,
 				930A00E029C26B690097C5CC /* HomeViewController.swift in Sources */,
+				DAAEA2DE29C5C3F300FC2265 /* TabbarViewController.swift in Sources */,
 				DA263A1829C3247900AC8AF2 /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

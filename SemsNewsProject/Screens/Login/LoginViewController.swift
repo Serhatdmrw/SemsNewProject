@@ -65,7 +65,7 @@ private extension LoginViewController {
 extension LoginViewController: LoginViewModelDelegate {
     
     func didSignInSuccess() {
-        navigationController?.pushViewController(HomeViewController(nibName: "HomeViewController", bundle: nil), animated: true)
+        navigationController?.pushViewController(TabbarViewController(nibName: "TabbarViewController", bundle: nil), animated: true)
     }
     
     func didSignInFail(message: String) {
