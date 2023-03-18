@@ -16,6 +16,8 @@
 		DA263A1829C3247900AC8AF2 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA263A1629C3247900AC8AF2 /* HomeViewCell.swift */; };
 		DA263A1929C3247900AC8AF2 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA263A1729C3247900AC8AF2 /* HomeViewCell.xib */; };
 		DA263A1D29C34EE100AC8AF2 /* anime.json in Resources */ = {isa = PBXBuildFile; fileRef = DA263A1C29C34EE100AC8AF2 /* anime.json */; };
+		DA53D87D29C6273A00A767DD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53D87B29C6273A00A767DD /* SearchTableViewCell.swift */; };
+		DA53D87E29C6273A00A767DD /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA53D87C29C6273A00A767DD /* SearchTableViewCell.xib */; };
 		DAA221AE29C0F6F600C7F80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221AD29C0F6F600C7F80C /* AppDelegate.swift */; };
 		DAA221B029C0F6F600C7F80C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221AF29C0F6F600C7F80C /* SceneDelegate.swift */; };
 		DAA221B229C0F6F600C7F80C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221B129C0F6F600C7F80C /* LoginViewController.swift */; };
@@ -28,6 +30,7 @@
 		DAAEA2DF29C5C3F300FC2265 /* TabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAEA2DD29C5C3F300FC2265 /* TabbarViewController.xib */; };
 		DAAEA2E729C5E53100FC2265 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */; };
 		DAAEA2E829C5E53100FC2265 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */; };
+		DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,8 @@
 		DA263A1629C3247900AC8AF2 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		DA263A1729C3247900AC8AF2 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		DA263A1C29C34EE100AC8AF2 /* anime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anime.json; sourceTree = "<group>"; };
+		DA53D87B29C6273A00A767DD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DA53D87C29C6273A00A767DD /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		DAA221AA29C0F6F600C7F80C /* SemsNewsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemsNewsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA221AD29C0F6F600C7F80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA221AF29C0F6F600C7F80C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		DAAEA2DD29C5C3F300FC2265 /* TabbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarViewController.xib; sourceTree = "<group>"; };
 		DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearcViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */,
+				DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */,
 				DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */,
+				DA53D87B29C6273A00A767DD /* SearchTableViewCell.swift */,
+				DA53D87C29C6273A00A767DD /* SearchTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -187,10 +196,10 @@
 		DAD121A229C2466A00C94701 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				DAAEA2E029C5CCF700FC2265 /* Search */,
-				DAAEA2DB29C5C3DD00FC2265 /* Tabbar */,
 				930A00D129C262CE0097C5CC /* Home */,
 				DAD121A329C2467F00C94701 /* Login */,
+				DAAEA2E029C5CCF700FC2265 /* Search */,
+				DAAEA2DB29C5C3DD00FC2265 /* Tabbar */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 				DA263A1D29C34EE100AC8AF2 /* anime.json in Resources */,
 				930A00E129C26B690097C5CC /* HomeViewController.xib in Resources */,
 				DAA221B529C0F6F600C7F80C /* Login.storyboard in Resources */,
+				DA53D87E29C6273A00A767DD /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +343,8 @@
 				930A00D029C25E970097C5CC /* ApiManager.swift in Sources */,
 				DAA221B029C0F6F600C7F80C /* SceneDelegate.swift in Sources */,
 				930A00CC29C251FB0097C5CC /* LoginViewModel.swift in Sources */,
+				DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */,
+				DA53D87D29C6273A00A767DD /* SearchTableViewCell.swift in Sources */,
 				DAA221C429C114C600C7F80C /* Model.swift in Sources */,
 				930A00E029C26B690097C5CC /* HomeViewController.swift in Sources */,
 				DAAEA2DE29C5C3F300FC2265 /* TabbarViewController.swift in Sources */,

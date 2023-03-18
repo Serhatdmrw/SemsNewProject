@@ -86,10 +86,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             makeAlert(tittleInput: "Error", messegaInput: "Bir hata oluştu.")
             return
         }
+        
         if let url = URL(string: articlesUrl) {
             UIApplication.shared.open(url)
         }
-
     }
 }
 
