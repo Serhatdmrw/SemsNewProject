@@ -13,6 +13,10 @@ class LoginViewController: UIViewController {
     // MARK: - Outles
     @IBOutlet private weak var emailText: UITextField!
     @IBOutlet private weak var passwordText: UITextField!
+    @IBOutlet private weak var textFieldSubView: UIView!
+    @IBOutlet private weak var passswordSubView: UIView!
+    @IBOutlet private weak var signUpButton: UIButton!
+    @IBOutlet private weak var signInButton: UIButton!
     
     // MARK: - Properties
     private let viewModel = LoginViewModel()
@@ -21,7 +25,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addGestureRecognizer()
         addDelegates()
+        setProperties()
     }
     
     // MARK: - Actions
@@ -59,13 +65,31 @@ private extension LoginViewController {
     func addDelegates() {
         viewModel.delegate = self
     }
+    
+    func setProperties() {
+        textFieldSubView.layer.cornerRadius = 12
+        passswordSubView.layer.cornerRadius = 12
+        signInButton.layer.cornerRadius = 24
+        signUpButton.layer.cornerRadius = 24
+    }
+    
+    func addGestureRecognizer() {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 // MARK: - LoginViewModelDelegate
 extension LoginViewController: LoginViewModelDelegate {
     
     func didSignInSuccess() {
-        navigationController?.pushViewController(TabbarViewController(nibName: "TabbarViewController", bundle: nil), animated: true)
+        let tabbarViewController = TabbarViewController(nibName: "TabbarViewController", bundle: nil)
+        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+        keyWindow?.rootViewController = tabbarViewController
     }
     
     func didSignInFail(message: String) {

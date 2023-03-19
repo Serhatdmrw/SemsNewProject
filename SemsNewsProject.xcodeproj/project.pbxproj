@@ -235,10 +235,10 @@
 			isa = PBXGroup;
 			children = (
 				DACB6EE229C640610029E1F1 /* Favorite */,
-				DACB6EE129C63FC20029E1F1 /* Settings */,
 				930A00D129C262CE0097C5CC /* Home */,
 				DAD121A329C2467F00C94701 /* Login */,
 				DAAEA2E029C5CCF700FC2265 /* Search */,
+				DACB6EE129C63FC20029E1F1 /* Settings */,
 				DAAEA2DB29C5C3DD00FC2265 /* Tabbar */,
 			);
 			path = Screens;
