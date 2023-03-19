@@ -9,19 +9,12 @@ import UIKit
 
 class HomeViewCell: UITableViewCell {
 
-    
+    @IBOutlet weak var cellSubView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var cellImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cellSubView.layer.cornerRadius = 32
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

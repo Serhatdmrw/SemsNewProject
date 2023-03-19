@@ -75,6 +75,18 @@ private extension HomeViewController {
             }
         }
     }
+    
+    func loadCellImage(url: URL, cell: HomeViewCell) {
+        
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: url),
+                  let image = UIImage(data: data) else { return }
+            
+            DispatchQueue.main.async {
+                cell.cellImageView.image = image
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -87,12 +99,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeViewCell
         cell.titleLabel.text = responseModel?.articles[indexPath.row].title ?? ""
-        let publishedAt = responseModel?.articles[indexPath.row].publishedAt ?? ""
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let date = dateFormatter.date(from: publishedAt) ?? Date()
-        dateFormatter.dateFormat = "dd-MM-yyyy' - 'HH:mm"
-        cell.dateLabel.text = dateFormatter.string(from: date)
+        let urlToImage = responseModel?.articles[indexPath.row].urlToImage ?? ""
+        if let imageUrl = URL(string: urlToImage) {
+            loadCellImage(url: imageUrl, cell: cell)
+        }
         return cell
     }
     
