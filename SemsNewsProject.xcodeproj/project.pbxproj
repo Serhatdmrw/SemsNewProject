@@ -33,6 +33,10 @@
 		DAAEA2E729C5E53100FC2265 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */; };
 		DAAEA2E829C5E53100FC2265 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */; };
 		DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */; };
+		DACB6EE529C640930029E1F1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */; };
+		DACB6EE629C640930029E1F1 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */; };
+		DACB6EE929C641C20029E1F1 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB6EE729C641C20029E1F1 /* FavoriteTableViewCell.swift */; };
+		DACB6EEA29C641C20029E1F1 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB6EE829C641C20029E1F1 /* FavoriteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearcViewModel.swift; sourceTree = "<group>"; };
+		DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		DACB6EE729C641C20029E1F1 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		DACB6EE829C641C20029E1F1 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,15 +205,35 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		DACB6EE129C63FC20029E1F1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DA53D87F29C631DC00A767DD /* SettingsViewController.swift */,
+				DA53D88029C631DC00A767DD /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DACB6EE229C640610029E1F1 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */,
+				DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */,
+				DACB6EE729C641C20029E1F1 /* FavoriteTableViewCell.swift */,
+				DACB6EE829C641C20029E1F1 /* FavoriteTableViewCell.xib */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		DAD121A229C2466A00C94701 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DACB6EE229C640610029E1F1 /* Favorite */,
+				DACB6EE129C63FC20029E1F1 /* Settings */,
 				930A00D129C262CE0097C5CC /* Home */,
 				DAD121A329C2467F00C94701 /* Login */,
 				DAAEA2E029C5CCF700FC2265 /* Search */,
 				DAAEA2DB29C5C3DD00FC2265 /* Tabbar */,
-				DA53D87F29C631DC00A767DD /* SettingsViewController.swift */,
-				DA53D88029C631DC00A767DD /* SettingsViewController.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -282,12 +310,14 @@
 			files = (
 				DAA221BA29C0F6FA00C7F80C /* LaunchScreen.storyboard in Resources */,
 				DAA221C229C0F90900C7F80C /* GoogleService-Info.plist in Resources */,
+				DACB6EE629C640930029E1F1 /* FavoriteViewController.xib in Resources */,
 				DA53D88229C631DC00A767DD /* SettingsViewController.xib in Resources */,
 				DAA221B729C0F6FA00C7F80C /* Assets.xcassets in Resources */,
 				DA263A1929C3247900AC8AF2 /* HomeViewCell.xib in Resources */,
 				DAAEA2DF29C5C3F300FC2265 /* TabbarViewController.xib in Resources */,
 				DAAEA2E829C5E53100FC2265 /* SearchViewController.xib in Resources */,
 				DA263A1D29C34EE100AC8AF2 /* anime.json in Resources */,
+				DACB6EEA29C641C20029E1F1 /* FavoriteTableViewCell.xib in Resources */,
 				930A00E129C26B690097C5CC /* HomeViewController.xib in Resources */,
 				DAA221B529C0F6F600C7F80C /* Login.storyboard in Resources */,
 				DA53D87E29C6273A00A767DD /* SearchTableViewCell.xib in Resources */,
@@ -347,10 +377,12 @@
 				DAAEA2E729C5E53100FC2265 /* SearchViewController.swift in Sources */,
 				930A00D729C2656E0097C5CC /* HomeViewModel.swift in Sources */,
 				DAA221AE29C0F6F600C7F80C /* AppDelegate.swift in Sources */,
+				DACB6EE529C640930029E1F1 /* FavoriteViewController.swift in Sources */,
 				930A00D029C25E970097C5CC /* ApiManager.swift in Sources */,
 				DAA221B029C0F6F600C7F80C /* SceneDelegate.swift in Sources */,
 				930A00CC29C251FB0097C5CC /* LoginViewModel.swift in Sources */,
 				DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */,
+				DACB6EE929C641C20029E1F1 /* FavoriteTableViewCell.swift in Sources */,
 				DA53D87D29C6273A00A767DD /* SearchTableViewCell.swift in Sources */,
 				DA53D88129C631DC00A767DD /* SettingsViewController.swift in Sources */,
 				DAA221C429C114C600C7F80C /* ResponseModel.swift in Sources */,

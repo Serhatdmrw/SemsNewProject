@@ -7,13 +7,15 @@
 
 import UIKit
 import Lottie
+import FirebaseFirestore
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private var responseModel: ResponseModel?
     private let viewModel = HomeViewModel()
-    var animationView = LottieAnimationView(name: "anime")
+    private var animationView = LottieAnimationView(name: "anime")
     
     // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!
@@ -60,6 +62,20 @@ private extension HomeViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }
+    
+    func saveFirebase(index: IndexPath) {
+        guard let userID = Auth.auth().currentUser?.uid,
+              let email = Auth.auth().currentUser?.email,
+              let urlString = self.responseModel?.articles[index.row].url else { return }
+        let fireStore = Firestore.firestore().collection("Favorite").document(email)
+        guard let fireStoreDictionary = ["url": urlString] as? [String : Any] else { return }
+        
+        fireStore.collection(userID).document().setData(fireStoreDictionary, merge: true) { error in
+            if let error = error {
+                self.makeAlert(tittleInput: "Error", messegaInput: error.localizedDescription)
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -90,6 +106,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if let url = URL(string: articlesUrl) {
             UIApplication.shared.open(url)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favoriteAction = UIContextualAction(style: .normal, title:  "Add Favorites", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            self.saveFirebase(index: indexPath)
+            success(true)
+        })
+        favoriteAction.image = UIImage(named: "favoriteIcon")
+        favoriteAction.backgroundColor = .gray
+        return UISwipeActionsConfiguration(actions: [favoriteAction])
     }
 }
 
