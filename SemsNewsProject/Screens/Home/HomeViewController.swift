@@ -44,7 +44,6 @@ private extension HomeViewController {
         animationView.play()
         animationView.isHidden = false
         viewModel.fechService()
-        
     }
     
     func setAnimationView() {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class SearchViewController: UIViewController {
 
@@ -16,17 +17,22 @@ class SearchViewController: UIViewController {
     // MARK: - Properties
     private var responseModel: ResponseModel?
     private let searcViewModel = SearcViewModel()
+    private var animationView = LottieAnimationView(name: "anime")
+
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setAnimationView()
         tableViewRegister()
         addDelegates()
     }
     
     // MARK: - Actions
     @IBAction func searchButton(_ sender: Any) {
+        animationView.play()
+        animationView.isHidden = false
         searcViewModel.fechService(searchText: searchText.text)
     }
 }
@@ -34,6 +40,15 @@ class SearchViewController: UIViewController {
 // MARK: - Helpers
 private extension SearchViewController {
     
+    func setAnimationView() {
+        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        animationView.center = view.center
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.isHidden = true
+        view.addSubview(animationView)
+    }
+
     func addDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -81,10 +96,14 @@ extension SearchViewController: SearcViewModelDelegate {
         self.responseModel = responseModel
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.animationView.stop()
+            self.animationView.isHidden = true
         }
     }
     
     func didFetchServiceFail(message: String) {
         self.makeAlert(tittleInput: "Error", messegaInput: "Üzgünüz bir hata oluştu")
+        self.animationView.stop()
+        self.animationView.isHidden = true
     }
 }

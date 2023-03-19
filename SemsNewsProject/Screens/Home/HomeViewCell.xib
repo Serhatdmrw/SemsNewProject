@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzt-sJ-p50">
-                        <rect key="frame" x="0.0" y="0.0" width="335" height="94"/>
+                        <rect key="frame" x="4" y="4" width="327" height="90"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV9-af-NQt">
-                        <rect key="frame" x="0.0" y="98" width="335" height="70"/>
+                        <rect key="frame" x="0.0" y="98" width="327" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="HTG-eg-P6s"/>
                         </constraints>
@@ -35,12 +36,12 @@
                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="MV9-af-NQt" secondAttribute="bottom" id="DZ9-Nt-fDM"/>
-                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="trailing" secondItem="MV9-af-NQt" secondAttribute="trailing" id="Dba-WY-Ul9"/>
+                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="trailing" secondItem="MV9-af-NQt" secondAttribute="trailing" constant="4" id="Dba-WY-Ul9"/>
                     <constraint firstItem="MV9-af-NQt" firstAttribute="top" secondItem="Hzt-sJ-p50" secondAttribute="bottom" constant="4" id="SXW-Kp-Szn"/>
-                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bvP-am-hWt"/>
-                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hsj-sA-BUv"/>
-                    <constraint firstAttribute="trailing" secondItem="Hzt-sJ-p50" secondAttribute="trailing" id="qeA-A0-o31"/>
-                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="leading" secondItem="MV9-af-NQt" secondAttribute="leading" id="vX8-xC-v9Y"/>
+                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="bvP-am-hWt"/>
+                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="hsj-sA-BUv"/>
+                    <constraint firstAttribute="trailing" secondItem="Hzt-sJ-p50" secondAttribute="trailing" constant="4" id="qeA-A0-o31"/>
+                    <constraint firstItem="Hzt-sJ-p50" firstAttribute="leading" secondItem="MV9-af-NQt" secondAttribute="leading" constant="4" id="vX8-xC-v9Y"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

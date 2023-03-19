@@ -28,7 +28,7 @@ private extension TabbarViewController {
         let searchViewController = SearchViewController()
         searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "searchIcon"), tag: 1)
         let settingsViewController = SettingsViewController()
-        settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "searchIcon"), tag: 2)
+        settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "settingsIcon"), tag: 2)
         viewControllers = [homeViewController, searchViewController, settingsViewController]
     }
     

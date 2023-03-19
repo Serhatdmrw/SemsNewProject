@@ -7,7 +7,8 @@ target 'SemsNewsProject' do
 
 pod 'FirebaseAuth'
 pod 'lottie-ios'
-pod 'FirebaseFirestore'  
+pod 'FirebaseFirestore'
+pod 'CodableFirebase'
 
   # Pods for SemsNewsProject
 
