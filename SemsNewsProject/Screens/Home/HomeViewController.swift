@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         setAnimationView()
         addDelegates()
         fechService()
-        self.tableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableViewRegister()
     }
 }
 
@@ -38,6 +38,10 @@ private extension HomeViewController {
         tableView.delegate = self
         tableView.dataSource = self
         viewModel.delegate = self
+    }
+    
+    func tableViewRegister() {
+        self.tableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     
     func fechService() {
@@ -65,9 +69,11 @@ private extension HomeViewController {
     func saveFirebase(index: IndexPath) {
         guard let userID = Auth.auth().currentUser?.uid,
               let email = Auth.auth().currentUser?.email,
-              let urlString = self.responseModel?.articles[index.row].url else { return }
+              let urlString = self.responseModel?.articles[index.row].url,
+              let urlToImage = self.responseModel?.articles[index.row].urlToImage,
+              let title = self.responseModel?.articles[index.row].title else { return }
         let fireStore = Firestore.firestore().collection("Favorite").document(email)
-        guard let fireStoreDictionary = ["url": urlString] as? [String : Any] else { return }
+        guard let fireStoreDictionary = ["url": urlString, "urlToImage": urlToImage, "title": title] as? [String : Any] else { return }
         
         fireStore.collection(userID).document().setData(fireStoreDictionary, merge: true) { error in
             if let error = error {

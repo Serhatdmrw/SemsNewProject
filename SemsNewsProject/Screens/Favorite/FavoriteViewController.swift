@@ -64,7 +64,19 @@ private extension FavoriteViewController {
     }
     
     func tableViewRegister() {
-        self.tableView.register(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "favoritecelll")
+        self.tableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+    }
+    
+    func loadCellImage(url: URL, cell: HomeViewCell) {
+        
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: url),
+                  let image = UIImage(data: data) else { return }
+            
+            DispatchQueue.main.async {
+                cell.cellImageView.image = image
+            }
+        }
     }
 }
 
@@ -76,8 +88,12 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favoritecelll", for: indexPath) as! FavoriteTableViewCell
-        cell.favoriteLabel.text = self.firebaseModels[indexPath.row].url
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeViewCell
+        cell.titleLabel.text = self.firebaseModels[indexPath.row].title
+        let imageToUrl = self.firebaseModels[indexPath.row].urlToImage
+        if let imageUrl = URL(string: imageToUrl) {
+            loadCellImage(url: imageUrl, cell: cell)
+        }
         return cell
     }
     

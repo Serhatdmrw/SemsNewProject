@@ -9,4 +9,6 @@ import Foundation
 
 struct FirebaseModel: Codable {
     let url: String
+    let urlToImage: String
+    let title: String
 }

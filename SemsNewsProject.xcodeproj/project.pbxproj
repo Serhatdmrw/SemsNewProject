@@ -35,8 +35,6 @@
 		DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */; };
 		DACB6EE529C640930029E1F1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */; };
 		DACB6EE629C640930029E1F1 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */; };
-		DACB6EE929C641C20029E1F1 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB6EE729C641C20029E1F1 /* FavoriteTableViewCell.swift */; };
-		DACB6EEA29C641C20029E1F1 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB6EE829C641C20029E1F1 /* FavoriteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,8 +70,6 @@
 		DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearcViewModel.swift; sourceTree = "<group>"; };
 		DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
-		DACB6EE729C641C20029E1F1 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
-		DACB6EE829C641C20029E1F1 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +215,6 @@
 				DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */,
 				DA9C52EF29C73C2F0013B951 /* FavoriteViewModel.swift */,
 				DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */,
-				DACB6EE729C641C20029E1F1 /* FavoriteTableViewCell.swift */,
-				DACB6EE829C641C20029E1F1 /* FavoriteTableViewCell.xib */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -317,7 +311,6 @@
 				DAAEA2DF29C5C3F300FC2265 /* TabbarViewController.xib in Resources */,
 				DAAEA2E829C5E53100FC2265 /* SearchViewController.xib in Resources */,
 				DA263A1D29C34EE100AC8AF2 /* anime.json in Resources */,
-				DACB6EEA29C641C20029E1F1 /* FavoriteTableViewCell.xib in Resources */,
 				930A00E129C26B690097C5CC /* HomeViewController.xib in Resources */,
 				DAA221B529C0F6F600C7F80C /* Login.storyboard in Resources */,
 			);
@@ -383,7 +376,6 @@
 				930A00CC29C251FB0097C5CC /* LoginViewModel.swift in Sources */,
 				DA9C52EE29C72FF10013B951 /* FirebaseModel.swift in Sources */,
 				DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */,
-				DACB6EE929C641C20029E1F1 /* FavoriteTableViewCell.swift in Sources */,
 				DA53D88129C631DC00A767DD /* SettingsViewController.swift in Sources */,
 				DAA221C429C114C600C7F80C /* ResponseModel.swift in Sources */,
 				930A00E029C26B690097C5CC /* HomeViewController.swift in Sources */,

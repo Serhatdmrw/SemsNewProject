@@ -21,11 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyT-VJ-i4R">
-                    <rect key="frame" x="24" y="236" width="345" height="50"/>
+                    <rect key="frame" x="24" y="83" width="345" height="58"/>
                     <color key="backgroundColor" red="0.29019607843137252" green="0.70588235294117641" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="SE7-iQ-n3o"/>
-                        <constraint firstAttribute="width" constant="345" id="vVg-m3-KmJ"/>
+                        <constraint firstAttribute="height" constant="58" id="SE7-iQ-n3o"/>
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
@@ -35,10 +34,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19F-oU-ARC">
-                    <rect key="frame" x="24" y="338" width="345" height="50"/>
+                    <rect key="frame" x="24" y="165" width="345" height="58"/>
                     <color key="backgroundColor" red="0.29019607843137252" green="0.70588235294117641" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="g3P-CW-BwJ"/>
+                        <constraint firstAttribute="height" constant="58" id="g3P-CW-BwJ"/>
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
@@ -54,10 +53,10 @@
             <color key="backgroundColor" red="0.11764705882352941" green="0.10588235294117647" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="19F-oU-ARC" secondAttribute="trailing" constant="24" id="4E1-bJ-VqM"/>
-                <constraint firstItem="19F-oU-ARC" firstAttribute="top" secondItem="PyT-VJ-i4R" secondAttribute="bottom" constant="52" id="NfV-dp-jfP"/>
+                <constraint firstItem="19F-oU-ARC" firstAttribute="top" secondItem="PyT-VJ-i4R" secondAttribute="bottom" constant="24" id="NfV-dp-jfP"/>
                 <constraint firstItem="19F-oU-ARC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="aqH-sm-Mlu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PyT-VJ-i4R" secondAttribute="trailing" constant="24" id="edM-kR-AoL"/>
-                <constraint firstItem="PyT-VJ-i4R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="177" id="gjF-lr-tjB"/>
+                <constraint firstItem="PyT-VJ-i4R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="gjF-lr-tjB"/>
                 <constraint firstItem="PyT-VJ-i4R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="sQC-dC-sdx"/>
             </constraints>
             <point key="canvasLocation" x="35.877862595419849" y="20.422535211267608"/>
