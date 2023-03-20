@@ -16,8 +16,6 @@
 		DA263A1829C3247900AC8AF2 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA263A1629C3247900AC8AF2 /* HomeViewCell.swift */; };
 		DA263A1929C3247900AC8AF2 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA263A1729C3247900AC8AF2 /* HomeViewCell.xib */; };
 		DA263A1D29C34EE100AC8AF2 /* anime.json in Resources */ = {isa = PBXBuildFile; fileRef = DA263A1C29C34EE100AC8AF2 /* anime.json */; };
-		DA53D87D29C6273A00A767DD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53D87B29C6273A00A767DD /* SearchTableViewCell.swift */; };
-		DA53D87E29C6273A00A767DD /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA53D87C29C6273A00A767DD /* SearchTableViewCell.xib */; };
 		DA53D88129C631DC00A767DD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53D87F29C631DC00A767DD /* SettingsViewController.swift */; };
 		DA53D88229C631DC00A767DD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA53D88029C631DC00A767DD /* SettingsViewController.xib */; };
 		DA9C52EE29C72FF10013B951 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C52ED29C72FF10013B951 /* FirebaseModel.swift */; };
@@ -53,8 +51,6 @@
 		DA263A1629C3247900AC8AF2 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		DA263A1729C3247900AC8AF2 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		DA263A1C29C34EE100AC8AF2 /* anime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anime.json; sourceTree = "<group>"; };
-		DA53D87B29C6273A00A767DD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		DA53D87C29C6273A00A767DD /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		DA53D87F29C631DC00A767DD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DA53D88029C631DC00A767DD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		DA9C52ED29C72FF10013B951 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
@@ -204,8 +200,6 @@
 				DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */,
 				DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */,
 				DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */,
-				DA53D87B29C6273A00A767DD /* SearchTableViewCell.swift */,
-				DA53D87C29C6273A00A767DD /* SearchTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -326,7 +320,6 @@
 				DACB6EEA29C641C20029E1F1 /* FavoriteTableViewCell.xib in Resources */,
 				930A00E129C26B690097C5CC /* HomeViewController.xib in Resources */,
 				DAA221B529C0F6F600C7F80C /* Login.storyboard in Resources */,
-				DA53D87E29C6273A00A767DD /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +384,6 @@
 				DA9C52EE29C72FF10013B951 /* FirebaseModel.swift in Sources */,
 				DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */,
 				DACB6EE929C641C20029E1F1 /* FavoriteTableViewCell.swift in Sources */,
-				DA53D87D29C6273A00A767DD /* SearchTableViewCell.swift in Sources */,
 				DA53D88129C631DC00A767DD /* SettingsViewController.swift in Sources */,
 				DAA221C429C114C600C7F80C /* ResponseModel.swift in Sources */,
 				930A00E029C26B690097C5CC /* HomeViewController.swift in Sources */,

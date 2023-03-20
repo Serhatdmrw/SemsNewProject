@@ -13,6 +13,8 @@ class SearchViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private weak var searchText: UITextField!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var textFieldSubView: UIView!
     
     // MARK: - Properties
     private var responseModel: ResponseModel?
@@ -24,6 +26,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addGestureRecognizer()
+        setProperties()
         setAnimationView()
         tableViewRegister()
         addDelegates()
@@ -39,6 +43,20 @@ class SearchViewController: UIViewController {
 
 // MARK: - Helpers
 private extension SearchViewController {
+    
+    func addGestureRecognizer() {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func setProperties() {
+        textFieldSubView.layer.cornerRadius = 12
+        searchButton.layer.cornerRadius = 12
+    }
     
     func setAnimationView() {
         animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
@@ -63,7 +81,19 @@ private extension SearchViewController {
     }
     
     func tableViewRegister() {
-        self.tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
+        self.tableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+    }
+    
+    func loadCellImage(url: URL, cell: HomeViewCell) {
+        
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: url),
+                  let image = UIImage(data: data) else { return }
+            
+            DispatchQueue.main.async {
+                cell.cellImageView.image = image
+            }
+        }
     }
 }
 
@@ -74,8 +104,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as! SearchTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeViewCell
         cell.titleLabel.text = responseModel?.articles[indexPath.row].title ?? ""
+        let urlToImage = responseModel?.articles[indexPath.row].urlToImage ?? ""
+        if let imageUrl = URL(string: urlToImage) {
+            loadCellImage(url: imageUrl, cell: cell)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
