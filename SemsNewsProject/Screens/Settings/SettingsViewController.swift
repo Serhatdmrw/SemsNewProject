@@ -10,10 +10,15 @@ import FirebaseAuth
 
 class SettingsViewController: UIViewController {
     
+    // MARK: - Outles
+    @IBOutlet private weak var favoriteButton: UIButton!
+    @IBOutlet private weak var logoutButton: UIButton!
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setProperties()
     }
     
     // MARK: - Actions
@@ -33,5 +38,13 @@ class SettingsViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+    }
+}
+
+// MARK: - Helpers
+private extension SettingsViewController {
+    func setProperties() {
+        favoriteButton.layer.cornerRadius = 12
+        logoutButton.layer.cornerRadius = 12
     }
 }

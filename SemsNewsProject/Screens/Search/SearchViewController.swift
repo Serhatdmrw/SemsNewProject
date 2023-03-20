@@ -13,8 +13,8 @@ class SearchViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private weak var searchText: UITextField!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var textFieldSubView: UIView!
+    @IBOutlet private weak var searchButton: UIButton!
+    @IBOutlet private weak var textFieldSubView: UIView!
     
     // MARK: - Properties
     private var responseModel: ResponseModel?
