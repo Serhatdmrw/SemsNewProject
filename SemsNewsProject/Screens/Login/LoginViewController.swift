@@ -88,8 +88,9 @@ extension LoginViewController: LoginViewModelDelegate {
     
     func didSignInSuccess() {
         let tabbarViewController = TabbarViewController(nibName: "TabbarViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: tabbarViewController)
         let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
-        keyWindow?.rootViewController = tabbarViewController
+        keyWindow?.rootViewController = navigationController
     }
     
     func didSignInFail(message: String) {

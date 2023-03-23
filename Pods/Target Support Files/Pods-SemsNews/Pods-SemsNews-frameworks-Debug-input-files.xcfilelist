@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-SemsNewsProject/Pods-SemsNewsProject-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-SemsNews/Pods-SemsNews-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
 ${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework

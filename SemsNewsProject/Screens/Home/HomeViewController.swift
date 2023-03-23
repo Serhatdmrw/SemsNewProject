@@ -114,7 +114,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let articlesUrl = self.responseModel?.articles[indexPath.row].url else {
-            makeAlert(tittleInput: "Error", messegaInput: "Bir hata oluştu.")
+            makeAlert(tittleInput: "Error", messegaInput: "Something went wrong.")
             return
         }
         

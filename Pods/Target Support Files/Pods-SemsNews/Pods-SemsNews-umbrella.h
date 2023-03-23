@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SemsNewsProjectVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SemsNewsProjectVersionString[];
+FOUNDATION_EXPORT double Pods_SemsNewsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SemsNewsVersionString[];
 

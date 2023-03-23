@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D7F5D5DD528D21A72DC87ADA5B12E2D"
-               BuildableName = "GoogleUtilities.framework"
-               BlueprintName = "GoogleUtilities"
+               BlueprintIdentifier = "9675F612461311B64E496A2BB2D82CF3"
+               BuildableName = "Pods_SemsNews.framework"
+               BlueprintName = "Pods-SemsNews"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

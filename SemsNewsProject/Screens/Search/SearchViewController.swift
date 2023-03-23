@@ -114,7 +114,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let articlesUrl = self.responseModel?.articles[indexPath.row].url else {
-            makeAlert(tittleInput: "Error", messegaInput: "Bir hata oluştu.")
+            makeAlert(tittleInput: "Error", messegaInput: "Something went wrong")
             return
         }
         
@@ -136,7 +136,7 @@ extension SearchViewController: SearcViewModelDelegate {
     }
     
     func didFetchServiceFail(message: String) {
-        self.makeAlert(tittleInput: "Error", messegaInput: "Üzgünüz bir hata oluştu")
+        self.makeAlert(tittleInput: "Error", messegaInput: "Sory, an error has occurred.")
         self.animationView.stop()
         self.animationView.isHidden = true
     }
