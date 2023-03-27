@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SemsNewsProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SemsNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,13 +143,34 @@
                             <constraint firstItem="1ER-Ob-yxu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="w3v-g3-DUb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZgI-Mg-xw2"/>
+                    <navigationItem key="navigationItem" id="ZgI-Mg-xw2">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Awe-kD-VMv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZRH-E1-f5d">
+                                <rect key="frame" x="320" y="5" width="57" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28896063570000002" green="0.70462316270000003" blue="0.80603861809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="It5-cF-6Gx"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
+                                <connections>
+                                    <action selector="didTapSkipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yn-zz-uz2"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="didTapSkipButton:" destination="BYZ-38-t0r" id="1T6-vu-gmE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailText" destination="ckt-t9-Dz0" id="eu6-rc-tGa"/>
                         <outlet property="passswordSubView" destination="OT1-d2-I47" id="OQI-9s-7cl"/>
                         <outlet property="passwordText" destination="sOe-Zg-FUk" id="swE-wo-Xl7"/>
                         <outlet property="signInButton" destination="4jA-M0-yBA" id="Rrc-9f-cPx"/>
                         <outlet property="signUpButton" destination="MDj-j9-ahL" id="4nZ-ST-4gr"/>
+                        <outlet property="skipButton" destination="Awe-kD-VMv" id="QPa-tg-Uow"/>
                         <outlet property="textFieldSubView" destination="FcO-50-bOs" id="jFd-cN-2l9"/>
                     </connections>
                 </viewController>

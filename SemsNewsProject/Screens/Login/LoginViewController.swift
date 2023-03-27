@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var passswordSubView: UIView!
     @IBOutlet private weak var signUpButton: UIButton!
     @IBOutlet private weak var signInButton: UIButton!
+    @IBOutlet private weak var skipButton: UIBarButtonItem!
     
     // MARK: - Properties
     private let viewModel = LoginViewModel()
@@ -50,6 +51,10 @@ class LoginViewController: UIViewController {
         
         viewModel.createUser(email: email, password: password)
     }
+    
+    @IBAction func didTapSkipButton(_ sender: Any) {
+        showTabbar()
+    }
 }
 
 // MARK: - Helpers
@@ -71,6 +76,7 @@ private extension LoginViewController {
         passswordSubView.layer.cornerRadius = 12
         signInButton.layer.cornerRadius = 24
         signUpButton.layer.cornerRadius = 24
+        skipButton.customView?.layer.cornerRadius = 8
     }
     
     func addGestureRecognizer() {
@@ -81,16 +87,20 @@ private extension LoginViewController {
     @objc func hideKeyboard() {
         view.endEditing(true)
     }
+    
+    func showTabbar() {
+        let tabbarViewController = TabbarViewController(nibName: "TabbarViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: tabbarViewController)
+        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+        keyWindow?.rootViewController = navigationController
+    }
 }
 
 // MARK: - LoginViewModelDelegate
 extension LoginViewController: LoginViewModelDelegate {
     
     func didSignInSuccess() {
-        let tabbarViewController = TabbarViewController(nibName: "TabbarViewController", bundle: nil)
-        let navigationController = UINavigationController(rootViewController: tabbarViewController)
-        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
-        keyWindow?.rootViewController = navigationController
+        showTabbar()
     }
     
     func didSignInFail(message: String) {

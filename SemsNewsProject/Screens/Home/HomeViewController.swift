@@ -71,7 +71,10 @@ private extension HomeViewController {
               let email = Auth.auth().currentUser?.email,
               let urlString = self.responseModel?.articles[index.row].url,
               let urlToImage = self.responseModel?.articles[index.row].urlToImage,
-              let title = self.responseModel?.articles[index.row].title else { return }
+              let title = self.responseModel?.articles[index.row].title else {
+            self.makeLoginAlert(tittleInput: "Error", messegaInput: "Please login.")
+            return
+        }
         let fireStore = Firestore.firestore().collection("Favorite").document(email)
         guard let fireStoreDictionary = ["url": urlString, "urlToImage": urlToImage, "title": title] as? [String : Any] else { return }
         
@@ -92,6 +95,20 @@ private extension HomeViewController {
                 cell.cellImageView.image = image
             }
         }
+    }
+    
+    func makeLoginAlert(tittleInput: String, messegaInput: String) {
+        let alert = UIAlertController(title: tittleInput, message: messegaInput, preferredStyle: UIAlertController.Style.alert)
+        let loginButton = UIAlertAction(title: "Login", style: UIAlertAction.Style.default) { _ in
+            let storyboard = UIStoryboard(name: "Login", bundle: .main)
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController") as! UINavigationController
+            let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+            keyWindow?.rootViewController = loginViewController
+        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default)
+        alert.addAction(loginButton)
+        alert.addAction(cancelButton)
+        self.present(alert, animated: true)
     }
 }
 
