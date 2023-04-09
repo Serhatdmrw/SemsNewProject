@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     // MARK: - Outles
     @IBOutlet private weak var favoriteButton: UIButton!
     @IBOutlet private weak var logoutButton: UIButton!
+    @IBOutlet weak var removeButton: UIButton!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -31,6 +32,16 @@ class SettingsViewController: UIViewController {
         navigationController?.pushViewController(FavoriteViewController(), animated: true)
     }
     
+    @IBAction func removeAccountButton(_ sender: Any) {
+        Auth.auth().currentUser?.delete(completion: { error in
+            if error == nil {
+                let storyboard = UIStoryboard(name: "Login", bundle: .main)
+                let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationViewController") as! UINavigationController
+                let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+                keyWindow?.rootViewController = loginViewController
+            }
+        })
+    }
     
     @IBAction func logoutButton(_ sender: Any) {
         
@@ -51,6 +62,7 @@ private extension SettingsViewController {
     func setProperties() {
         favoriteButton.layer.cornerRadius = 12
         logoutButton.layer.cornerRadius = 12
+        removeButton.layer.cornerRadius = 12
     }
     
     func makeLoginAlert(tittleInput: String, messegaInput: String) {

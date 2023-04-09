@@ -118,9 +118,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         
-        if let url = URL(string: articlesUrl) {
-            UIApplication.shared.open(url)
-        }
+        let webViewController = WebViewController()
+        webViewController.pageUrl = articlesUrl
+        navigationController?.pushViewController(webViewController, animated: true)
     }
 }
 

@@ -5,13 +5,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="SemsNewsProject" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="SemsNews" customModuleProvider="target">
             <connections>
                 <outlet property="favoriteButton" destination="PyT-VJ-i4R" id="96l-Kv-OyZ"/>
                 <outlet property="logoutButton" destination="19F-oU-ARC" id="10b-3f-Qrh"/>
+                <outlet property="removeButton" destination="ncD-gx-5GO" id="M3b-PW-jlL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="3ry-sm-8TZ"/>
             </connections>
         </placeholder>
@@ -28,7 +30,7 @@
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Favorilerim"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Favorites"/>
                     <connections>
                         <action selector="favoriteButton:" destination="-1" eventType="touchUpInside" id="HBE-Qg-MI0"/>
                     </connections>
@@ -41,11 +43,26 @@
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Çıkış">
+                    <buttonConfiguration key="configuration" style="plain" title="Log Out">
                         <backgroundConfiguration key="background"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="logoutButton:" destination="-1" eventType="touchUpInside" id="Hp8-eo-iNI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncD-gx-5GO">
+                    <rect key="frame" x="24" y="247" width="345" height="58"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="wwd-cf-VgO"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Delete Account">
+                        <backgroundConfiguration key="background"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="removeAccountButton:" destination="-1" eventType="touchUpInside" id="2Hr-Ck-y9l"/>
                     </connections>
                 </button>
             </subviews>
@@ -54,7 +71,10 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="19F-oU-ARC" secondAttribute="trailing" constant="24" id="4E1-bJ-VqM"/>
                 <constraint firstItem="19F-oU-ARC" firstAttribute="top" secondItem="PyT-VJ-i4R" secondAttribute="bottom" constant="24" id="NfV-dp-jfP"/>
+                <constraint firstItem="ncD-gx-5GO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="QbD-2V-dcs"/>
+                <constraint firstItem="ncD-gx-5GO" firstAttribute="top" secondItem="19F-oU-ARC" secondAttribute="bottom" constant="24" id="YJ2-4U-BEq"/>
                 <constraint firstItem="19F-oU-ARC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="aqH-sm-Mlu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ncD-gx-5GO" secondAttribute="trailing" constant="24" id="asr-mh-7b8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PyT-VJ-i4R" secondAttribute="trailing" constant="24" id="edM-kR-AoL"/>
                 <constraint firstItem="PyT-VJ-i4R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="gjF-lr-tjB"/>
                 <constraint firstItem="PyT-VJ-i4R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="sQC-dC-sdx"/>
@@ -62,4 +82,9 @@
             <point key="canvasLocation" x="35.877862595419849" y="20.422535211267608"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
