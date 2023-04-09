@@ -33,6 +33,8 @@
 		DAAEA2E729C5E53100FC2265 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */; };
 		DAAEA2E829C5E53100FC2265 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */; };
 		DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */; };
+		DAC07A7429D9F07200AD128E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC07A7229D9F07200AD128E /* WebViewController.swift */; };
+		DAC07A7529D9F07200AD128E /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC07A7329D9F07200AD128E /* WebViewController.xib */; };
 		DACB6EE529C640930029E1F1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */; };
 		DACB6EE629C640930029E1F1 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		DAAEA2E529C5E53100FC2265 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DAAEA2E629C5E53100FC2265 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		DAAEA2E929C5E97200FC2265 /* SearcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearcViewModel.swift; sourceTree = "<group>"; };
+		DAC07A7229D9F07200AD128E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DAC07A7329D9F07200AD128E /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		DACB6EE329C640930029E1F1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		DACB6EE429C640930029E1F1 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +208,15 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		DAC07A7129D9F05900AD128E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				DAC07A7229D9F07200AD128E /* WebViewController.swift */,
+				DAC07A7329D9F07200AD128E /* WebViewController.xib */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		DACB6EE129C63FC20029E1F1 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,7 @@
 		DAD121A229C2466A00C94701 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DAC07A7129D9F05900AD128E /* WebView */,
 				DACB6EE229C640610029E1F1 /* Favorite */,
 				930A00D129C262CE0097C5CC /* Home */,
 				DAD121A329C2467F00C94701 /* Login */,
@@ -309,6 +323,7 @@
 				DAA221BA29C0F6FA00C7F80C /* LaunchScreen.storyboard in Resources */,
 				DAA221C229C0F90900C7F80C /* GoogleService-Info.plist in Resources */,
 				DACB6EE629C640930029E1F1 /* FavoriteViewController.xib in Resources */,
+				DAC07A7529D9F07200AD128E /* WebViewController.xib in Resources */,
 				DA53D88229C631DC00A767DD /* SettingsViewController.xib in Resources */,
 				DAA221B729C0F6FA00C7F80C /* Assets.xcassets in Resources */,
 				DA263A1929C3247900AC8AF2 /* HomeViewCell.xib in Resources */,
@@ -381,6 +396,7 @@
 				DA9C52EE29C72FF10013B951 /* FirebaseModel.swift in Sources */,
 				DAAEA2EA29C5E97200FC2265 /* SearcViewModel.swift in Sources */,
 				DA53D88129C631DC00A767DD /* SettingsViewController.swift in Sources */,
+				DAC07A7429D9F07200AD128E /* WebViewController.swift in Sources */,
 				DAA221C429C114C600C7F80C /* ResponseModel.swift in Sources */,
 				930A00E029C26B690097C5CC /* HomeViewController.swift in Sources */,
 				DAAEA2DE29C5C3F300FC2265 /* TabbarViewController.swift in Sources */,
@@ -532,7 +548,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = A9ZTFRX9B5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SemsNewsProject/Info.plist;
@@ -546,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhatdemir.semsnews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -567,7 +583,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = A9ZTFRX9B5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SemsNewsProject/Info.plist;
@@ -581,7 +597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhatdemir.semsnews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

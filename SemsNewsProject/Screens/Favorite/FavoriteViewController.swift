@@ -99,9 +99,9 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let firebaseModelsUrl = self.firebaseModels[indexPath.row].url
-        if let url = URL(string: firebaseModelsUrl) {
-            UIApplication.shared.open(url)
-        }
+        let webViewController = WebViewController()
+        webViewController.pageUrl = firebaseModelsUrl
+        navigationController?.pushViewController(webViewController, animated: true)
     }
 }
 
